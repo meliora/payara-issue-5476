@@ -1,0 +1,18 @@
+//apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'javax:javaee-api:8.0'
+    implementation 'javax.cache:cache-api:1.1.1'
+}
+
+war {
+}
+
+// do not create a separate jar file
+jar.enabled = false
